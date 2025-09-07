@@ -22,9 +22,10 @@ const Hero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/70"></div>
       
-      {/* Glow effects */}
+      {/* Enhanced Glow effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] animate-glow-pulse"></div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
@@ -34,9 +35,12 @@ const Hero = () => {
             Discord Bot Developer
           </div>
 
-          {/* Main Logo */}
-          <h1 className="font-mono text-6xl md:text-8xl lg:text-9xl font-bold mb-6 glow-text animate-scale-in">
+          {/* Main Logo with enhanced effects */}
+          <h1 className="font-mono text-6xl md:text-8xl lg:text-9xl font-bold mb-6 glow-text animate-scale-in relative">
             Λѕн
+            <div className="absolute inset-0 font-mono text-6xl md:text-8xl lg:text-9xl font-bold opacity-20 blur-sm animate-pulse">
+              Λѕн
+            </div>
           </h1>
 
           {/* Tagline */}

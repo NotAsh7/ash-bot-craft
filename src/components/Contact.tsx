@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Cards */}
+        {/* Enhanced Contact Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {contactMethods.map((method, index) => (
             <div 
@@ -47,11 +47,11 @@ const Contact = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-lg ${method.color} flex items-center justify-center`}>
+                <div className={`w-12 h-12 rounded-lg ${method.color} flex items-center justify-center transition-all duration-300 hover:scale-110`}>
                   <method.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2">{method.platform}</h3>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{method.platform}</h3>
                   <p className="text-muted-foreground mb-1">{method.handle}</p>
                   {method.id && (
                     <p className="text-xs text-muted-foreground/70 mb-4">{method.id}</p>

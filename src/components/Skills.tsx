@@ -23,16 +23,16 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skills Grid */}
+        {/* Enhanced Skills Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <div 
               key={skill.name}
-              className="skill-item animate-fade-in-up"
+              className="skill-item animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-3xl mb-3">{skill.icon}</div>
-              <h3 className="font-medium text-foreground">{skill.name}</h3>
+              <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-125">{skill.icon}</div>
+              <h3 className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">{skill.name}</h3>
             </div>
           ))}
         </div>
