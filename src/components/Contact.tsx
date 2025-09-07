@@ -1,3 +1,5 @@
+import { MessageCircle, Mail } from 'lucide-react';
+
 const Contact = () => {
   const contactMethods = [
     {
@@ -6,16 +8,16 @@ const Contact = () => {
       id: "(1149069310636064819)",
       action: "Message Me",
       link: "https://discord.com/users/1149069310636064819",
-      icon: "💬",
-      color: "bg-blue-500/20 border-blue-500/30 text-blue-400"
+      icon: MessageCircle,
+      color: "bg-blue-500/20 border-blue-500/30"
     },
     {
       platform: "Email",
       handle: "notashcodes@gmail.com",
       action: "Send Email", 
       link: "mailto:notashcodes@gmail.com",
-      icon: "📧",
-      color: "bg-green-500/20 border-green-500/30 text-green-400"
+      icon: Mail,
+      color: "bg-green-500/20 border-green-500/30"
     }
   ];
 
@@ -45,8 +47,8 @@ const Contact = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-lg ${method.color} flex items-center justify-center text-2xl`}>
-                  {method.icon}
+                <div className={`w-12 h-12 rounded-lg ${method.color} flex items-center justify-center`}>
+                  <method.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">{method.platform}</h3>
@@ -82,7 +84,7 @@ const Contact = () => {
               href="https://discord.com/users/1149069310636064819"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary group"
+              className="btn-primary inline-flex items-center group"
             >
               Start Your Project
               <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

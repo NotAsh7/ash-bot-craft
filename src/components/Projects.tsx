@@ -1,4 +1,4 @@
-import discordBotIcon from '@/assets/discord-bot-icon.png';
+import { Bot } from 'lucide-react';
 
 const Projects = () => {
   const project = {
@@ -37,12 +37,8 @@ const Projects = () => {
             {/* Header */}
             <div className="flex items-start justify-between mb-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center p-2">
-                  <img 
-                    src={discordBotIcon} 
-                    alt="Discord Bot" 
-                    className="w-full h-full object-contain"
-                  />
+                <div className="w-12 h-12 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center">
+                  <Bot className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold font-mono">{project.title}</h3>
